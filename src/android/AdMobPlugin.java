@@ -47,6 +47,7 @@ public class AdMobPlugin extends GenericAdPlugin {
   private static final String OPT_FACEBOOK = "Facebook";
   private static final String OPT_MOBFOX = "MobFox";
 
+
   private AdSize adSize = AdSize.SMART_BANNER;
 
   public static final String OPT_AD_EXTRAS = "adExtras";
@@ -163,9 +164,11 @@ public class AdMobPlugin extends GenericAdPlugin {
     if(view instanceof PublisherAdView) {
       PublisherAdView dfpView = (PublisherAdView) view;
       return dfpView.getAdSize();
-    } else {
+    } else if(view instanceof AdView) {
       AdView admobView = (AdView) view;
       return admobView.getAdSize();
+    } else {
+      return new AdSize(0,0);
     }
   }
 
@@ -410,7 +413,7 @@ protected void __showInterstitial(Object interstitial) {
     if(mLocation != null) builder.setLocation(mLocation);
     if(mForFamily != null) {
       Bundle extras = new Bundle();
-      extras.putBoolean("is_designed_for_families", ("yes".compareToIgnoreCase(mForChild) == 0));
+      extras.putBoolean("is_designed_for_families", ("yes".compareToIgnoreCase(mForFamily) == 0));
       builder.addNetworkExtrasBundle(AdMobAdapter.class, extras);
     }
     if(mForChild != null) {
@@ -631,6 +634,7 @@ protected void __showInterstitial(Object interstitial) {
       synchronized (mLock) {
         mIsRewardedVideoLoading = false;
       }
+      rewardVideoAd = null; //<-- Added line before the fireAdEvent
       fireAdErrorEvent(EVENT_AD_FAILLOAD, errorCode, getErrorReason(errorCode), ADTYPE_REWARDVIDEO);
     }
 
@@ -663,6 +667,7 @@ protected void __showInterstitial(Object interstitial) {
 
     @Override
     public void onRewardedVideoAdClosed() {
+      rewardVideoAd = null; //<-- Added line before the fireAdEvent
       fireAdEvent(EVENT_AD_DISMISS, ADTYPE_REWARDVIDEO);
 
       // if focus on webview of banner, press back button will quit
