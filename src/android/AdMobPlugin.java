@@ -332,9 +332,10 @@ protected void __showInterstitial(Object interstitial) {
     
     if (isTesting) {
       // This will request test ads on the emulator and deviceby passing this hashed device ID.
-      String ANDROID_ID = Settings.Secure.getString(activity.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-      String deviceId = md5(ANDROID_ID).toUpperCase();
-      builder = builder.addTestDevice(deviceId).addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+      //String ANDROID_ID = Settings.Secure.getString(activity.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+      //String deviceId = md5(ANDROID_ID).toUpperCase();
+      //builder = builder.addTestDevice(deviceId).addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+      builder = builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
     }
 
     if(adExtras != null) {
@@ -389,9 +390,10 @@ protected void __showInterstitial(Object interstitial) {
 
     if (isTesting) {
       // This will request test ads on the emulator and deviceby passing this hashed device ID.
-      String ANDROID_ID = Settings.Secure.getString(activity.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
-      String deviceId = md5(ANDROID_ID).toUpperCase();
-      builder = builder.addTestDevice(deviceId).addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+      //String ANDROID_ID = Settings.Secure.getString(activity.getContentResolver(), android.provider.Settings.Secure.ANDROID_ID);
+      //String deviceId = md5(ANDROID_ID).toUpperCase();
+      //builder = builder.addTestDevice(deviceId).addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
+      builder = builder.addTestDevice(AdRequest.DEVICE_ID_EMULATOR);
     }
 
     if(adExtras != null) {
