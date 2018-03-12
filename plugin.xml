@@ -2,16 +2,18 @@
 
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-admobpro"
-        version="2.31.1">
+        id="cordova-plugin-admobpro-clean"
+        version="2.31.2">
       
-    <name>AdMob Plugin Pro</name>
-    <description>Ultimate Cordova Plugin for Google AdMob and DFP to monetize hybrid apps. Show mobile Ad with single line of JavaScript. Compatible with Cordova CLI, PhoneGap Build, Intel XDK/Crosswalk, Google ChromeApp, Ionic, Meteor, etc.</description>
-    <author>Liming Xie</author>
+    <name>AdMob Plugin Pro Clean</name>
+    <description>
+      Cordova admob plugin. Please use original repo for now: https://github.com/floatinghotpot/cordova-admob-pro. This fork is for testing purposes.
+    </description>
+    <author>Naveed</author>
     <license>MIT</license>
-    <keywords>rjfun,admob,google,ad</keywords>
-    <repo>https://github.com/floatinghotpot/cordova-admob-pro.git</repo>
-    <issue>https://github.com/floatinghotpot/cordova-admob-pro/issues</issue>
+    <keywords>admob,google,ad</keywords>
+    <repo>https://github.com/naveed-ahmad/cordova-admob-pro</repo>
+    <issue>https://github.com/naveed-ahmad/cordova-admob-pro/issues</issue>
 
     <engines>
         <engine name="cordova-android" version="&gt;=3.5.0" />

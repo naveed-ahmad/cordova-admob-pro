@@ -1,9 +1,9 @@
 {
   "name": "cordova-plugin-admobpro-clean",
-  "version": "2.31.1",
+  "version": "2.31.2",
   "description": "Ultimate Cordova Plugin for Google AdMob and DFP to monetize hybrid apps. Show mobile Ad with single line of JavaScript. Compatible with Cordova CLI, PhoneGap Build, Intel XDK/Crosswalk, Google ChromeApp, Ionic, Meteor, etc.",
   "cordova": {
-    "id": "cordova-plugin-admobpro",
+    "id": "cordova-plugin-admobpro-clean",
     "platforms": [
       "android",
       "ios",
@@ -13,38 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/floatinghotpot/cordova-admob-pro.git"
+    "url": "https://github.com/naveed-ahmad/cordova-admob-pro.git"
   },
   "bugs": {
-    "url": "https://github.com/floatinghotpot/cordova-admob-pro/issues"
+    "url": "https://github.com/naveed-ahmad/cordova-admob-pro/issues"
   },
   "keywords": [
     "cordova",
     "admob",
-    "plugin",
-    "phonegap",
-    "intel-xdk",
-    "intel",
-    "xdk",
-    "crosswalk",
-    "ionic",
-    "meteor",
-    "ad",
-    "ecosystem:cordova",
-    "cordova-android",
-    "cordova-ios",
-    "cordova-wp8",
-    "cordova-amazon-fireos",
-    "google",
-    "ads",
-    "eclipse",
-    "android-studio",
-    "simple",
-    "easy",
-    "android",
-    "ios",
-    "windows",
-    "phonegap",
     "monetization",
     "monetisation",
     "money",
@@ -60,12 +36,10 @@
     "mobfox",
     "mopub",
     "inmobi",
-    "chartboost",
-    "domob",
-    "rjfun"
+    "chartboost"
   ],
   "author": {
-    "name": "Liming Xie"
+    "name": "Naveed"
   },
   "license": "MIT"
 }
